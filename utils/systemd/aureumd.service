@@ -1,0 +1,17 @@
+[Unit]
+Description=Aureum Full Node
+After=network.target
+
+[Service]
+User=aureum
+Group=aureum
+WorkingDirectory=~
+
+Type=forking
+PIDFile=/var/run/aureumd.pid
+
+ExecStart=/usr/bin/aureumd --config-file /etc/aureumd.conf \
+    --detach --pidfile /var/run/aureumd.pid
+
+[Install]
+WantedBy=multi-user.target
