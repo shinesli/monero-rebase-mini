@@ -92,7 +92,7 @@ namespace cryptonote {
     const int target_minutes = target / 60;
     const int emission_speed_factor = EMISSION_SPEED_FACTOR_PER_MINUTE - (target_minutes-1);
 	
-	const uint64_t total = ((uint64_t)(-1))
+	const uint64_t total = ((uint64_t)(-1));
 	const uint64_t premine = (0.12*total);
     if (median_size > 0 && already_generated_coins < premine) {
      reward = premine;
